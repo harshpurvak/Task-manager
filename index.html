@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <h1>Task <span>Manager</span></h1>
+        <button class="theme-btn" type="button">Dark</button>
+      </div>
+
+      <div class="box">
+        <form class="input-area">
+          <input class="task-title" type="text" placeholder="Task title" value="" />
+          <textarea class="task-description" placeholder="Task description"></textarea>
+          <div class="form-bottom">
+            <select required class="category-select">
+              <option>Study</option>
+              <option>Home</option>
+              <option>Work</option>
+              <option>Personal</option>
+            </select>
+            <button class="add-btn" type="submit">Add</button>
+          </div>
+        </form>
+
+        <div class="task-counts">
+          <p>Pending: <span class="pending-count">0</span></p>
+          <p>Completed: <span class="completed-count">0</span></p>
+        </div>
+
+        <input class="search-task" type="text" placeholder="Search task" />
+
+        <ul class="tasks"></ul>
+      </div>
+
+      <section class="box demo-section">
+        <h2>Event Propagation</h2>
+
+        <div class="demo-grid">
+          <div>
+            <h3>Event Bubbling Demo</h3>
+            <div class="grandparent bubbling-grandparent">
+              Grandparent
+
+              <div class="parent bubbling-parent">
+                Parent
+
+                <button class="child-btn bubbling-child" type="button">
+                  Child Button
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Event Capturing Demo</h3>
+            <div class="grandparent capturing-grandparent">
+              Grandparent
+
+              <div class="parent capturing-parent">
+                Parent
+
+                <button class="child-btn capturing-child" type="button">
+                  Child Button
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <h3>Comparison</h3>
+          <div class="comparison-table">
+            <div>Event Capturing</div>
+            <div>Event Bubbling</div>
+            <div>Top to Bottom</div>
+            <div>Bottom to Top</div>
+            <div>Ancestor first</div>
+            <div>Target first</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="box render-section">
+        <h2>How Browsers Render a Web Page</h2>
+
+        <div class="pipeline">
+          <div class="pipeline-card">
+            <span>1</span>
+            <h3>HTML</h3>
+            <p>Browser reads HTML document.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>2</span>
+            <h3>Parsing</h3>
+            <p>Browser starts understanding the HTML.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>3</span>
+            <h3>Tokenization</h3>
+            <p>HTML is broken into small tokens.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>4</span>
+            <h3>DOM Tree</h3>
+            <p>Browser creates the page structure.</p>
+          </div>
+          <div class="arrow">+</div>
+          <div class="pipeline-card css-card">
+            <span>5</span>
+            <h3>CSSOM Tree</h3>
+            <p>Browser creates the styling structure from CSS.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>6</span>
+            <h3>Render Tree</h3>
+            <p>DOM and CSSOM are combined.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>7</span>
+            <h3>Layout</h3>
+            <p>Browser calculates size and position.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>8</span>
+            <h3>Paint</h3>
+            <p>Browser draws pixels on the screen.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card">
+            <span>9</span>
+            <h3>Compositing</h3>
+            <p>Browser combines layers together.</p>
+          </div>
+          <div class="arrow">↓</div>
+          <div class="pipeline-card screen-card">
+            <span>10</span>
+            <h3>Screen Output</h3>
+            <p>The final page is displayed.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
