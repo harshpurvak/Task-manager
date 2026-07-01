@@ -17,7 +17,7 @@ I used this project to practice:
 
 ## How to run
 
-Just open `index.html` in the browser.
+Just open `index.html` in the browser
 
 
 
